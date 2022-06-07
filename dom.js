@@ -77,3 +77,44 @@
 /*
     querySelector
 */
+
+// const header = document.querySelector('#main-header');
+// header.style.borderBottom = 'solid 4px red';
+
+// const input = document.querySelector('input');
+// input.value = 'Hello World';
+
+// const submit = document.querySelector('input[type="submit"]');
+// submit.value = 'SEND';
+
+// //selects first element in the group
+// const item = document.querySelector('.list-group-item');
+// item.style.color = 'red';
+
+// const lastItem = document.querySelector
+// ('.list-group-item:last-child');
+// lastItem.style.color = 'blue';
+
+// const secondItem = document.querySelector
+// ('.list-group-item:nth-child(2)');
+// secondItem.style.color = 'coral';
+
+/*
+    querySelectorAll
+*/
+
+let titles = document.querySelectorAll('.title');
+console.log(titles);
+titles[0].textContent = 'Hello';
+
+const odds = document.querySelectorAll('li:nth-child(odd)');
+const evens =  document.querySelectorAll('li:nth-child(even)');
+
+for(const oddItem of odds){
+    oddItem.style.backgroundColor = 'blue';
+}
+
+
+for(const evenItem of evens){
+    evenItem.style.backgroundColor = 'yellow';
+}
