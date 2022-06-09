@@ -182,7 +182,7 @@ newDiv.className = 'hello';
 //add id
 newDiv.id = 'hello1';
 
-//add atribute
+//add attribute
 newDiv.setAttribute('title','Hello Div');
 
 //create text node
@@ -193,7 +193,7 @@ newDiv.appendChild(newDivTextNode);
 
 console.clear();
 
-//add newdiv to DOM
+//add newDiv to DOM
 
 const container = document.querySelector('header .container');
 console.log(container);
@@ -204,4 +204,25 @@ console.log(newDiv);
 
 newDiv.style.fontSize =  '30px'
 container.insertBefore(newDiv,h1);
+console.clear();
 
+var button = document.getElementById("button");
+button.addEventListener("click",buttonClick);
+
+// function buttonClick(){
+//     // console.log("buttonClicked");
+//     document.getElementById('header-title').textContent ='Changed'
+//     document.querySelector('#main').style.backgroundColor = 'blue';
+// }
+
+function buttonClick(e){
+    // console.log(e);
+    console.log(e.target);
+    console.log(e.target.id);
+    console.log(e.target.className);
+    console.log(e.target.classList);
+    const output = document.getElementById("output");
+    output.innerHTML = "<h3>"+e.target.id+"</h3>";
+    console.log(e.type);
+
+}
